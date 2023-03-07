@@ -98,7 +98,7 @@ public class PlayerController : MonoBehaviour
     private void Shoot()
     {
         Rigidbody rbBullet = Instantiate(projectile, projectilePos.position, Quaternion.identity).GetComponent<Rigidbody>();
-        rbBullet.AddForce(Vector3.forward * 32f, ForceMode.Impulse);
+        rbBullet.AddForce(transform.forward * 32f, ForceMode.Impulse);
     }
 
     private void OnDrawGizmos()
